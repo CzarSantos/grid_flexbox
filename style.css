@@ -1,0 +1,65 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin-top: 100px;
+}
+img{
+    max-width: 100%;/* aumenta no max a 100% do tamanho do conteiner */
+    display: block;
+    border-radius: 5px;
+
+
+}
+
+/* FLEXBOX */
+
+.header{
+    background: rgb(0, 0, 0);
+    display: flex;/* coloca uma div ao lado da outra */
+    flex-wrap: wrap;/* joga item a baixo quando tela diminuir */
+    justify-content: space-between;/* espaço entre itens */
+    align-items: center;/* Alinha verticalmente */
+    padding: 20px;
+}
+
+/* menu */
+.menu{
+    display: flex;/* itens lado a lado */
+}
+.menu li{
+    margin-left: 20px;/* espaçamento do itens */
+}
+.menu li a {
+    display: block;/* separa por blocos */
+    padding: 10px;
+}
+
+/* CSS FLEXBOX */
+
+.flex{
+    display: flex;/* uma foto ao lado da outra */
+    flex-wrap: wrap;/* pode quebrar */
+    max-width: 800px;/* largura max do conteiner/div */
+    margin: 0 auto;
+    
+}
+
+.flex > div{
+    flex: 1 1 200px;/* se expande, diminui, base de 200px(se não quebra) */
+    margin: 10px;
+    
+   
+}
+
+/* 12:23 */
