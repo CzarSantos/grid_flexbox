@@ -5,6 +5,9 @@ body, ul, li, p{
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
 }
+body{
+    margin-bottom: 100px;
+}
 
 a{
     text-decoration: none;
@@ -18,8 +21,6 @@ img{
     max-width: 100%;/* aumenta no max a 100% do tamanho do conteiner */
     display: block;
     border-radius: 5px;
-
-
 }
 
 /* FLEXBOX */
@@ -62,4 +63,45 @@ img{
    
 }
 
-/* 12:23 */
+
+/* CSS GRID 1 */
+
+
+.grid1{
+    display: grid;/* iniciando grid */
+    grid-template-columns: repeat(3, 1fr) ;/* 1fr 1fr 1fr  *//* dividindo em 3 partes/colunas */
+    max-width: 800px;/* Definindo o max da div */
+    padding: 10px;
+    margin: 0 auto;
+    grid-gap: 20px;/* Espaçamento entre os itens */
+}
+
+.grid1 > div:nth-child(n + 4){/* chamando div especifica por numeração | 'n + 4' A partir do 4º item */
+    display: grid;
+    grid-template-columns: 1fr 1fr;/* duas colunas img e text */
+    grid-gap: 10px;
+    align-items: center;
+}
+.grid1 > div.anuncio{
+    grid-column: 1;/* posicionado na primera coluna */
+    grid-row: 2/5;/* pega da linha 2 até a 5 */
+    display: block;/* volta a padrão */
+}
+
+/* Responsive */
+@media (max-width: 600px){/* 600px para baixo */
+    .grid1{
+        grid-template-columns: 1fr 1fr;/* or repeat(2, 1fr) duas colunas*/
+    }
+    .grid1 > div:nth-child(n + 4){
+        display: block;/* volta ao padrão de blocos| anula formatações do grid */
+    }
+    .grid1 > div.anuncio{
+        grid-column: auto;/* posicionamento automatico */
+        grid-row: auto;
+        order: -1;/* definindo a order que elemento aparece no grid */
+    }
+
+}
+
+/* 23:43 */
