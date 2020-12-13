@@ -135,4 +135,36 @@ img{
         margin: 0 10px;
     }
 }
-/* 29:19 */
+
+
+ /* CSS GRID 3 */
+ .grid3{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-gap: 20px;
+     margin: 0 auto;
+     max-width: 800px;
+     padding: 10px;
+ }
+
+ .grid3-item:nth-child(1){/* primeira div/item */
+    grid-row: 1 / 3;/* linha 1 ao 3 */
+ }
+
+ /* tratando posições img e text */
+ .grid3-item{
+     display: grid;
+ }
+ .grid3-item img{
+     grid-column: 1;/* 1º coluna p/ img */
+     grid-row: 1 / 3;/* img da linha 1 a 3 */
+     align-self: end;
+ }
+ .grid3-item p{
+     background: rgba(0,0,0,0.6);
+     padding: 10px;
+     color: white;
+     grid-column: 1;/* 1º coluna p/ <p>*/
+     grid-row: 2;/* coloca <p> na segunda linha */
+     align-self: end;/* alinha ao fim */
+ }
